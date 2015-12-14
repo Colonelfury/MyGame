@@ -506,5 +506,22 @@ namespace SuperAdventure
             Map map = new Map();
             map.Show();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Reset your progress?",
+                                     "Are you sure?",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                _player = Player.CreateDefaultPlayer();
+                MoveTo(_player.CurrentLocation);
+                UpdatePlayerStats();
+            }
+            else
+            {
+                // If 'No', do something here.
+            }
+        }
     }
 }
