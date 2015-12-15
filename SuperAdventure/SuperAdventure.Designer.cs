@@ -51,6 +51,7 @@
             this.dgvQuests = new System.Windows.Forms.DataGridView();
             this.Map = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnTheme = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(617, 531);
+            this.label5.Location = new System.Drawing.Point(617, 521);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 8;
@@ -135,7 +136,7 @@
             // cboWeapons
             // 
             this.cboWeapons.FormattingEnabled = true;
-            this.cboWeapons.Location = new System.Drawing.Point(369, 559);
+            this.cboWeapons.Location = new System.Drawing.Point(369, 549);
             this.cboWeapons.Name = "cboWeapons";
             this.cboWeapons.Size = new System.Drawing.Size(121, 21);
             this.cboWeapons.TabIndex = 9;
@@ -143,14 +144,14 @@
             // cboPotions
             // 
             this.cboPotions.FormattingEnabled = true;
-            this.cboPotions.Location = new System.Drawing.Point(369, 593);
+            this.cboPotions.Location = new System.Drawing.Point(369, 583);
             this.cboPotions.Name = "cboPotions";
             this.cboPotions.Size = new System.Drawing.Size(121, 21);
             this.cboPotions.TabIndex = 10;
             // 
             // btnUseWeapon
             // 
-            this.btnUseWeapon.Location = new System.Drawing.Point(620, 559);
+            this.btnUseWeapon.Location = new System.Drawing.Point(620, 549);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(75, 23);
             this.btnUseWeapon.TabIndex = 11;
@@ -160,7 +161,7 @@
             // 
             // btnUsePotion
             // 
-            this.btnUsePotion.Location = new System.Drawing.Point(620, 593);
+            this.btnUsePotion.Location = new System.Drawing.Point(620, 583);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
             this.btnUsePotion.TabIndex = 12;
@@ -236,7 +237,7 @@
             this.dgvInventory.MultiSelect = false;
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
-            this.dgvInventory.Size = new System.Drawing.Size(312, 309);
+            this.dgvInventory.Size = new System.Drawing.Size(300, 309);
             this.dgvInventory.TabIndex = 19;
             // 
             // dgvQuests
@@ -250,14 +251,14 @@
             this.dgvQuests.MultiSelect = false;
             this.dgvQuests.Name = "dgvQuests";
             this.dgvQuests.ReadOnly = true;
-            this.dgvQuests.Size = new System.Drawing.Size(312, 189);
+            this.dgvQuests.Size = new System.Drawing.Size(300, 189);
             this.dgvQuests.TabIndex = 20;
             // 
             // Map
             // 
-            this.Map.Location = new System.Drawing.Point(369, 520);
+            this.Map.Location = new System.Drawing.Point(401, 620);
             this.Map.Name = "Map";
-            this.Map.Size = new System.Drawing.Size(75, 23);
+            this.Map.Size = new System.Drawing.Size(55, 23);
             this.Map.TabIndex = 21;
             this.Map.Text = "Map";
             this.Map.UseVisualStyleBackColor = true;
@@ -265,7 +266,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(242, 100);
+            this.btnReset.Location = new System.Drawing.Point(16, 638);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(85, 23);
             this.btnReset.TabIndex = 22;
@@ -273,11 +274,23 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // btnTheme
+            // 
+            this.btnTheme.Location = new System.Drawing.Point(224, 638);
+            this.btnTheme.Name = "btnTheme";
+            this.btnTheme.Size = new System.Drawing.Size(92, 23);
+            this.btnTheme.TabIndex = 23;
+            this.btnTheme.Text = "Change Theme";
+            this.btnTheme.UseVisualStyleBackColor = true;
+            this.btnTheme.Click += new System.EventHandler(this.btnTheme_Click);
+            // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 651);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(719, 664);
+            this.Controls.Add(this.btnTheme);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.dgvQuests);
@@ -336,6 +349,7 @@
         private System.Windows.Forms.DataGridView dgvQuests;
         private System.Windows.Forms.Button Map;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnTheme;
     }
 }
 

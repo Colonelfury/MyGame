@@ -19,6 +19,7 @@ namespace SuperAdventure
 
         private Player _player;
         private Monster _currentMonster;
+        bool isDark = false;
 
         public SuperAdventure()
         {
@@ -517,10 +518,56 @@ namespace SuperAdventure
                 _player = Player.CreateDefaultPlayer();
                 MoveTo(_player.CurrentLocation);
                 UpdatePlayerStats();
+                rtbMessages.Clear();
             }
             else
             {
                 // If 'No', do something here.
+            }
+        }
+
+        private void btnTheme_Click(object sender, EventArgs e)
+        {
+            
+            if (isDark == false)
+            {
+                this.BackColor = System.Drawing.Color.FromArgb(0, 0, 0); ; //Background
+                rtbLocation.BackColor = System.Drawing.Color.FromArgb(64, 64, 64); //Top Message Box Background
+                rtbLocation.ForeColor = System.Drawing.Color.White; //Top Message Box Text
+                rtbMessages.BackColor = System.Drawing.Color.FromArgb(64, 64, 64); //Bottom Message Box Background
+                rtbMessages.ForeColor = System.Drawing.Color.White; //Bottom Message Box Text
+                dgvInventory.BackgroundColor = System.Drawing.Color.FromArgb(64, 64, 64); //Inventory Background
+                dgvQuests.BackgroundColor = System.Drawing.Color.FromArgb(64, 64, 64); //Quest Background
+                lblHitPoints.ForeColor = System.Drawing.Color.White; //HP #
+                lblGold.ForeColor = System.Drawing.Color.White; //Gold #
+                lblExperience.ForeColor = System.Drawing.Color.White; //XP #
+                lblLevel.ForeColor = System.Drawing.Color.White; //Level #
+                label1.ForeColor = System.Drawing.Color.White; //HP Text
+                label2.ForeColor = System.Drawing.Color.White; //Gold Text
+                label3.ForeColor = System.Drawing.Color.White; //XP Text
+                label4.ForeColor = System.Drawing.Color.White; //Level Text
+                label5.ForeColor = System.Drawing.Color.White; //"Select Action"
+                isDark = true;
+            }
+            else
+            {
+                this.BackColor = System.Drawing.Color.White; //Background
+                rtbLocation.BackColor = default(Color); //Top Message Box Background
+                rtbLocation.ForeColor = default(Color); //Top Message Box Text
+                rtbMessages.BackColor = default(Color); //Bottom Message Box Background
+                rtbMessages.ForeColor = default(Color); //Bottom Message Box Text
+                dgvInventory.BackgroundColor = System.Drawing.Color.Gray; //Inventory Background
+                dgvQuests.BackgroundColor = System.Drawing.Color.Gray; //Quest Background
+                lblHitPoints.ForeColor = default(Color); //HP #
+                lblGold.ForeColor = default(Color); //Gold #
+                lblExperience.ForeColor = default(Color); //XP #
+                lblLevel.ForeColor = default(Color); //Level #
+                label1.ForeColor = default(Color); //HP Text
+                label2.ForeColor = default(Color); //Gold Text
+                label3.ForeColor = default(Color); //XP Text
+                label4.ForeColor = default(Color); //Level Text
+                label5.ForeColor = default(Color); //"Select Action"
+                isDark = false;
             }
         }
     }
